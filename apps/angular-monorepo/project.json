@@ -19,7 +19,10 @@
           "apps/angular-monorepo/src/favicon.ico",
           "apps/angular-monorepo/src/assets"
         ],
-        "styles": ["apps/angular-monorepo/src/styles.css"],
+        "styles": [
+          "apps/angular-monorepo/src/custom-theme.scss",
+          "apps/angular-monorepo/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {

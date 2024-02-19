@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@angular-monorepo/input": ["libs/shared/input/src/index.ts"],
+      "@angular-monorepo/product-detail": ["libs/product-detail/src/index.ts"],
+      "@angular-monorepo/product-list": ["libs/product-list/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
