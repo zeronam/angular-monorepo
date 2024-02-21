@@ -1,1 +1,9 @@
-<p>product-list works!</p>
+<div class="wrapper">
+    <ul>
+        <li *ngFor="let product of (products$ | async)">
+            <img class="img" src="{{product.imageUrl}}" />
+            <p>  {{ product?.name }} </p>
+        </li>
+    </ul>
+
+</div>

@@ -5,7 +5,7 @@ export const initProductList = createAction('[ProductList Page] Init');
 
 export const loadProductListSuccess = createAction(
   '[ProductList/API] Load ProductList Success',
-  props<{ productList: ProductListEntity[] }>()
+  props<{ productList: any[] }>()
 );
 
 export const loadProductListFailure = createAction(

@@ -7,9 +7,9 @@ import { ProductListEntity } from './product-list.models';
 export const PRODUCT_LIST_FEATURE_KEY = 'productList';
 
 export interface ProductListState extends EntityState<ProductListEntity> {
-  selectedId?: string | number; // which ProductList record has been selected
-  loaded: boolean; // has the ProductList list been loaded
-  error?: string | null; // last known error (if any)
+  selectedId?: string | number;
+  loaded: boolean;
+  error?: string | null;
 }
 
 export interface ProductListPartialState {

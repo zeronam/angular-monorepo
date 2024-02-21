@@ -15,9 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-monorepo/data-access/product-api": [
+        "libs/data-access/product-api/src/index.ts"
+      ],
       "@angular-monorepo/input": ["libs/shared/input/src/index.ts"],
       "@angular-monorepo/product-detail": ["libs/product-detail/src/index.ts"],
-      "@angular-monorepo/product-list": ["libs/product-list/src/index.ts"]
+      "@angular-monorepo/product-list": ["libs/product-list/src/index.ts"],
+      "@angular-monorepo/shared/data-access/product-api": [
+        "libs/shared/data-access/product-api/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

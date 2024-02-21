@@ -1,22 +1,25 @@
 import { Injectable, inject } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
-import { switchMap, catchError, of } from 'rxjs';
+import { switchMap, catchError, of, map } from 'rxjs';
 import * as ProductListActions from './product-list.actions';
-import * as ProductListFeature from './product-list.reducer';
+import { ProductsService } from '@angular-monorepo/shared/data-access/product-api';
 
 @Injectable()
 export class ProductListEffects {
+  constructor(    
+    private productsService: ProductsService
+  ) {}
+
   private actions$ = inject(Actions);
 
-  init$ = createEffect(() =>
+  getProductList$ = createEffect(() =>
     this.actions$.pipe(
       ofType(ProductListActions.initProductList),
-      switchMap(() =>
-        of(ProductListActions.loadProductListSuccess({ productList: [] }))
-      ),
-      catchError((error) => {
-        console.error('Error', error);
-        return of(ProductListActions.loadProductListFailure({ error }));
+      switchMap(() => {
+        return this.productsService.getProductList().pipe(
+          map((products: any[]) => ProductListActions.loadProductListSuccess({ productList: products })),
+          catchError(error => of(ProductListActions.loadProductListFailure({error: error})))
+        );
       })
     )
   );
