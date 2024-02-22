@@ -5,6 +5,7 @@ import { Store, select } from '@ngrx/store';
 import * as ProductListActions from '../+state/product-list.actions';
 import * as ProductListSelectors from '../+state/product-list.selectors';
 import { Observable, map } from 'rxjs';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'angular-monorepo-product-list',
@@ -19,10 +20,15 @@ export class ProductListComponent implements OnInit {
     map(entity => Object.values(entity)));
 
   constructor(
-    private store$: Store
+    private store$: Store,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.store$.dispatch(ProductListActions.initProductList());
+  }
+
+  onGetProductId(id: string) {
+    this.router.navigate(['product', id]);
   }
 }

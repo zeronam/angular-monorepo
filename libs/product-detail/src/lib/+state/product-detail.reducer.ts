@@ -10,6 +10,7 @@ export interface ProductDetailState extends EntityState<ProductDetailEntity> {
   selectedId?: string | number; // which ProductDetail record has been selected
   loaded: boolean; // has the ProductDetail list been loaded
   error?: string | null; // last known error (if any)
+  productDetail: any;
 }
 
 export interface ProductDetailPartialState {
@@ -23,6 +24,7 @@ export const initialProductDetailState: ProductDetailState =
   productDetailAdapter.getInitialState({
     // set initial required properties
     loaded: false,
+    productDetail: null
   });
 
 const reducer = createReducer(
@@ -35,7 +37,7 @@ const reducer = createReducer(
   on(
     ProductDetailActions.loadProductDetailSuccess,
     (state, { productDetail }) =>
-      productDetailAdapter.setAll(productDetail, { ...state, loaded: true })
+    ({ ...state, productDetail })
   ),
   on(ProductDetailActions.loadProductDetailFailure, (state, { error }) => ({
     ...state,

@@ -1,7 +1,7 @@
 <div class="wrapper">
     <ul>
-        <li *ngFor="let product of (products$ | async)">
-            <img class="img" src="{{product.imageUrl}}" />
+        <li *ngFor="let product of (products$ | async)" (click)="onGetProductId(product.id)">
+            <img class="img" src="{{product.imageUrls[0]}}" />
             <p>  {{ product?.name }} </p>
         </li>
     </ul>

@@ -1,11 +1,14 @@
 import { createAction, props } from '@ngrx/store';
 import { ProductDetailEntity } from './product-detail.models';
 
-export const initProductDetail = createAction('[ProductDetail Page] Init');
+export const initProductDetail = createAction(
+  '[ProductDetail Page] Init',
+  props<{ productId: any }>()
+);
 
 export const loadProductDetailSuccess = createAction(
   '[ProductDetail/API] Load ProductDetail Success',
-  props<{ productDetail: ProductDetailEntity[] }>()
+  props<{ productDetail: any }>()
 );
 
 export const loadProductDetailFailure = createAction(

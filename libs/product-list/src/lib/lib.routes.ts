@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
 import { ProductListComponent } from './components/product-list.component';
-import { provideStore, provideState } from '@ngrx/store';
+import { provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import * as fromProductList from './+state/product-list.reducer';
 import { ProductListEffects } from './+state/product-list.effects';

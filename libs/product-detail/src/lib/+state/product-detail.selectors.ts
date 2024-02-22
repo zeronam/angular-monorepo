@@ -36,6 +36,11 @@ export const selectSelectedId = createSelector(
   (state: ProductDetailState) => state.selectedId
 );
 
+export const selectProductDetail = createSelector(
+  selectProductDetailState,
+  (state: ProductDetailState) => state.productDetail
+);
+
 export const selectEntity = createSelector(
   selectProductDetailEntities,
   selectSelectedId,
