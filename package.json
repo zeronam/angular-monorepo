@@ -84,5 +84,16 @@
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.3.2"
+  },
+  "nx": {
+    "includedScripts": [
+      "echo",
+      "check-commit",
+      "check-format",
+      "check-imports",
+      "check-lock-files",
+      "check-codeowners",
+      "documentation"
+    ]
   }
 }
