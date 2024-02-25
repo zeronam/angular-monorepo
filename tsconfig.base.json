@@ -15,6 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-monorepo/auth/data-access": [
+        "libs/auth/data-access/src/index.ts"
+      ],
+      "@angular-monorepo/auth/form": ["libs/auth/form/src/index.ts"],
       "@angular-monorepo/data-access/product-api": [
         "libs/data-access/product-api/src/index.ts"
       ],

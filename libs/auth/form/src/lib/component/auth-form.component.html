@@ -1,0 +1,22 @@
+<div class="form-wrapper">
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form [formGroup]="loginForm" fxLayout="column" fxLayoutAlign="center none">
+                <mat-form-field class="field">
+                  <input matInput placeholder="email" type="email" formControlName="email">
+                  <mat-error>
+                    <span *ngIf="loginForm.get('email')?.hasError('required') && loginForm.touched">Required Field</span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="field">
+                  <input matInput placeholder="password" type="password" formControlName="password">
+                  <mat-error>
+                    <span *ngIf="loginForm.get('password')?.hasError('required') && loginForm.touched">Required Field</span>
+                  </mat-error>
+                </mat-form-field>
+            </form>
+            <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+.toolbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    ul {
+        display: flex;
+        margin: 0 auto;
+        li {
+            margin-right: 2rem;
+            cursor: pointer;
+            
+            .link {
+                text-decoration: none;
+                color: #fff;
+                padding: 10px 15px;
+                border-radius: 5px;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.3);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.wrapper {
+    width: 78rem;
+    display: block;
+    margin: 0 auto;
+}

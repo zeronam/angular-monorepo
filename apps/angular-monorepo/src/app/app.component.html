@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary" class="toolbar">
+    <ul>
+        <li>
+            <a [routerLink]="['/product-list']" class="link">Products</a> 
+        </li>
+        <li>
+            <a [routerLink]="['/login']" class="link">Contact</a> 
+        </li>
+        <li>
+            <a [routerLink]="['/']" class="link">About us</a> 
+        </li>
+    </ul>
+</mat-toolbar>
+
+<div class="wrapper">
+    <router-outlet></router-outlet>
+</div>
+
+

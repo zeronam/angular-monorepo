@@ -6,6 +6,7 @@ import { provideRouter, withComponentInputBinding, withEnabledBlockingInitialNav
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { isDevMode } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app/app.component';
 import { appRoutes } from './app/app.routes';
@@ -17,6 +18,7 @@ bootstrapApplication(AppComponent, {
       withEnabledBlockingInitialNavigation(),
       withComponentInputBinding()
     ),
+    provideAnimations(),
     provideHttpClient(),
     provideStore(),
     provideEffects(),
