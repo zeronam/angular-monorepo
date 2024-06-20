@@ -36,7 +36,7 @@ export class AuthFormComponent {
   }
 
   onLogin() {
-    this.http.post('https://nodejs-todo-9emm.onrender.com/auth/login', this.loginForm.value).subscribe((res:any)=>{
+    this.http.post('https://nodejs-todo-9emm.onrender.com/auth/signup', this.loginForm.value).subscribe((res: any)=>{
       if(res.token) {
         alert("Login Success");
         localStorage.setItem('user', res.token);

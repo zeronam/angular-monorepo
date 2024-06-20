@@ -5,7 +5,6 @@ import {
   productDetailAdapter,
 } from './product-detail.reducer';
 
-// Lookup the 'ProductDetail' feature state managed by NgRx
 export const selectProductDetailState =
   createFeatureSelector<ProductDetailState>(PRODUCT_DETAIL_FEATURE_KEY);
 

@@ -7,9 +7,9 @@ import { ProductDetailEntity } from './product-detail.models';
 export const PRODUCT_DETAIL_FEATURE_KEY = 'productDetail';
 
 export interface ProductDetailState extends EntityState<ProductDetailEntity> {
-  selectedId?: string | number; // which ProductDetail record has been selected
-  loaded: boolean; // has the ProductDetail list been loaded
-  error?: string | null; // last known error (if any)
+  selectedId?: string | number;
+  loaded: boolean;
+  error?: string | null;
   productDetail: any;
 }
 
@@ -22,7 +22,6 @@ export const productDetailAdapter: EntityAdapter<ProductDetailEntity> =
 
 export const initialProductDetailState: ProductDetailState =
   productDetailAdapter.getInitialState({
-    // set initial required properties
     loaded: false,
     productDetail: null
   });

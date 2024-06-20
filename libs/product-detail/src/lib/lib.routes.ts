@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
 import { ProductDetailComponent } from './components/product-detail.component';
-import { provideStore, provideState } from '@ngrx/store';
+import { provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import * as fromProductDetail from './+state/product-detail.reducer';
 import { ProductDetailEffects } from './+state/product-detail.effects';

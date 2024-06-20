@@ -1,7 +1,4 @@
-/**
- * Interface for the 'ProductDetail' data
- */
 export interface ProductDetailEntity {
-  id: string | number; // Primary ID
+  id: string | number;
   name: string;
 }

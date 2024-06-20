@@ -11,7 +11,7 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('@angular-monorepo/product-detail').then((m) => m.productDetailRoutes),
   },
   {
-    path: 'login',
+    path: '',
     loadChildren: () =>
       import('@angular-monorepo/auth/form').then((m) => m.authFormRoutes),
   },
