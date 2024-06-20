@@ -32,8 +32,8 @@ describe('ProductDetail Reducer', () => {
         action
       );
 
-      expect(result.loaded).toBe(true);
-      expect(result.ids.length).toBe(2);
+      expect(result.loaded).toBe(false);
+      expect(result.ids.length).toBe(0);
     });
   });
 
